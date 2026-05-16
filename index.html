@@ -1,0 +1,209 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Koliko znamo o svom zdravlju?</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header>
+    <nav class="navbar">
+      <h1>Udruga Nada</h1>
+
+      <ul>
+        <li><a href="#home">Početna</a></li>
+        <li><a href="#about">Informacije</a></li>
+        <li><a href="#selfcheck">Samopregled</a></li>
+        <li><a href="#myths">Mitovi</a></li>
+        <li><a href="#quiz">Kviz</a></li>
+        <li><a href="#help">Pomoć</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h2>Koliko znamo o svom zdravlju?</h2>
+
+      <p>
+        Edukativna aplikacija o prevenciji raka dojke,
+        važnosti samopregleda i redovitih pregleda.
+      </p>
+
+      <a href="#about" class="btn">Započni</a>
+    </div>
+  </section>
+
+  <!-- INFO -->
+  <section id="about" class="section">
+    <h2>Što je rak dojke?</h2>
+
+    <div class="card-container">
+
+      <div class="card">
+        <h3>Rano otkrivanje</h3>
+        <p>
+          Rano otkrivanje raka dojke značajno povećava mogućnost uspješnog liječenja.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Preventivni pregledi</h3>
+        <p>
+          Redoviti pregledi i mamografija važni su za očuvanje zdravlja.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Briga o zdravlju</h3>
+        <p>
+          Informiranost i edukacija prvi su koraci prema prevenciji.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="video-container">
+      <iframe
+        src="https://www.youtube.com/embed/LrfE6JUwIms"
+        title="YouTube video"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </section>
+
+  <!-- SELF CHECK -->
+  <section id="selfcheck" class="section pink-section">
+    <h2>Samopregled dojki</h2>
+
+    <p class="center">
+      Samopregled se preporučuje jednom mjesečno.
+    </p>
+
+    <div class="steps">
+
+      <div class="step">
+        <h3>1. Pogled u ogledalo</h3>
+        <p>Promatrajte izgled dojki i moguće promjene.</p>
+      </div>
+
+      <div class="step">
+        <h3>2. Podignite ruke</h3>
+        <p>Provjerite postoje li nepravilnosti ili promjene kože.</p>
+      </div>
+
+      <div class="step">
+        <h3>3. Pregled dodirom</h3>
+        <p>Laganim kružnim pokretima pregledajte dojke.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MYTHS -->
+  <section id="myths" class="section">
+    <h2>Mitovi i činjenice</h2>
+
+    <div class="myth-container">
+
+      <div class="myth-card" onclick="toggleFact(this)">
+        <h3>Mit 1</h3>
+        <p>Rak dojke pogađa samo žene.</p>
+
+        <div class="fact hidden">
+          ❌ Netočno! Rak dojke može se pojaviti i kod muškaraca.
+        </div>
+      </div>
+
+      <div class="myth-card" onclick="toggleFact(this)">
+        <h3>Mit 2</h3>
+        <p>Ako nema simptoma, pregled nije potreban.</p>
+
+        <div class="fact hidden">
+          ❌ Netočno! Preventivni pregledi važni su i bez simptoma.
+        </div>
+      </div>
+
+      <div class="myth-card" onclick="toggleFact(this)">
+        <h3>Mit 3</h3>
+        <p>Samopregled može pomoći ranom otkrivanju.</p>
+
+        <div class="fact hidden">
+          ✅ Točno! Redoviti samopregled povećava šansu ranog otkrivanja.
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- QUIZ -->
+  <section id="quiz" class="section pink-section">
+    <h2>Kviz znanja</h2>
+
+    <div class="quiz-box">
+
+      <div class="question">
+        <p>1. Koliko često se preporučuje samopregled?</p>
+
+        <label><input type="radio" name="q1" value="a"> Jednom godišnje</label>
+        <label><input type="radio" name="q1" value="b"> Jednom mjesečno</label>
+      </div>
+
+      <div class="question">
+        <p>2. Mogu li muškarci dobiti rak dojke?</p>
+
+        <label><input type="radio" name="q2" value="a"> Da</label>
+        <label><input type="radio" name="q2" value="b"> Ne</label>
+      </div>
+
+      <div class="question">
+        <p>3. Što je mamografija?</p>
+
+        <label><input type="radio" name="q3" value="a"> Vrsta pregleda dojki</label>
+        <label><input type="radio" name="q3" value="b"> Lijek</label>
+      </div>
+
+      <button onclick="checkQuiz()" class="btn">
+        Provjeri rezultate
+      </button>
+
+      <h3 id="result"></h3>
+
+    </div>
+  </section>
+
+  <!-- HELP -->
+  <section id="help" class="section">
+    <h2>Gdje potražiti pomoć?</h2>
+
+    <div class="help-box">
+
+      <p><strong>Udruga Nada Rijeka</strong></p>
+      <p>Psihološka podrška i edukacija žena oboljelih od raka dojke.</p>
+
+      <br>
+
+      <p><strong>KBC Rijeka</strong></p>
+      <p>Informacije o pregledima i liječenju.</p>
+
+      <br>
+
+      <p><strong>HZZO</strong></p>
+      <p>Nacionalni program preventivnih pregleda.</p>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Projekt za kolegij Izgradnja multimedijskih sustava | Udruga Nada</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
