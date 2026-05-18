@@ -31,14 +31,21 @@ function checkQuiz(){
         score++;
     }
 
+    // Q4
+    const q4 = document.querySelector('input[name="q4"]:checked');
+
+    if(q && q4.value === "c"){
+        score++;
+    }
+
     const result = document.getElementById('result');
 
-    result.innerHTML = `Osvojili ste ${score}/3 boda!`;
+    result.innerHTML = `Osvojili ste ${score}/4 boda!`;
 
-    if(score === 3){
+    if(score === 4){
         result.innerHTML += "<br>Odlično poznajete važnost prevencije!";
     }
-    else if(score === 2){
+    else if(score === 3){
         result.innerHTML += "<br>Vrlo dobro! Nastavite se informirati.";
     }
     else{
