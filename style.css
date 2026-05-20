@@ -51,7 +51,7 @@ body{
 .hero{
   height:100vh;
   background:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-  url('https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=1200&auto=format&fit=crop');
+  url('https://drinkovic.hr/images/uploads/2019/10/rak-dojke.jpg');
   background-size:cover;
   background-position:center;
 
@@ -79,7 +79,7 @@ body{
 .btn{
   background:#ff4f81;
   color:white;
-  padding:14px 28px;
+  padding:25px 90px;
   border:none;
   border-radius:10px;
   text-decoration:none;
