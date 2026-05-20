@@ -34,7 +34,7 @@ function checkQuiz(){
     // Q4
     const q4 = document.querySelector('input[name="q4"]:checked');
 
-    if(q && q4.value === "c"){
+    if(q4 && q4.value === "c"){
         score++;
     }
 

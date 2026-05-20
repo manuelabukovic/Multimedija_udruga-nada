@@ -227,6 +227,28 @@ Ako vam je tako lakše, namažite dojke uljem ili mlijekom za tijelo ili ako ste
 
       <h3 id="result"></h3>
 
+      <script>
+      function checkQuiz() {
+        // Točni odgovori: q1=b, q2=a, q3=a, q4=c
+        const answers = { q1: 'b', q2: 'a', q3: 'a', q4: 'c' };
+        let score = 0;
+
+        // Provjera svakog od 4 pitanja
+        for (let i = 1; i <= 4; i++) {
+          const checked = document.querySelector(`input[name="q${i}"]:checked`);
+          if (checked && checked.value === answers[`q${i}`]) {
+            score++;
+          }
+        }
+
+        // Ispis rezultata na ekran
+        const resultText = document.getElementById('result');
+        resultText.innerHTML = `Točno ste odgovorili na ${score} od 4 pitanja.`;
+        resultText.style.color = '#d81b60'; // Ružičasta boja teksta za rezultat
+        resultText.style.marginTop = '15px';
+      }
+    </script>
+
     </div>
   </section>
 
@@ -245,7 +267,7 @@ Ako vam je tako lakše, namažite dojke uljem ili mlijekom za tijelo ili ako ste
 
       <p><strong>KBC Rijeka</strong></p>
       <p>Informacije o pregledima i liječenju.</p>
-      <a href = "https://kbc-rijeka.hr/" >https://kbc-rijeka.hr/</a>"
+      <a href = "https://kbc-rijeka.hr/" >https://kbc-rijeka.hr/</a>
 
       <br>
       <br>
