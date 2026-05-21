@@ -69,11 +69,12 @@
     </div>
 
     <div class="video-container">
-      <iframe
-        src="https://www.youtube.com/embed/LrfE6JUwIms"
-        title="YouTube video"
-        allowfullscreen>
-      </iframe>
+      <iframe width="560" height="315"
+      src="https://www.youtube.com/embed/rlTd7aqmDbQ"
+      title="YouTube video player"
+      frameborder="0"
+      allowfullscreen>
+    </iframe>
     </div>
   </section>
 
@@ -83,38 +84,50 @@
 
     <p class="center">
       Samopregled se preporučuje jednom mjesečno.
+      <p> Korake o samopregledu dojki možete pronaći odmah ispod. </p>
+      <p>Klikom na ružičasti tekst, odnosno bijeli okvir, prikazat će Vam se dodatno objašnjenje svakog koraka.</p>
     </p>
+   
+      
 
-    <div class="steps">
 
-      <div class="step">
-        <h3>1. Pogled u ogledalo</h3>
-        <p>Započnite samopregled ispred ogledala kako biste vizualno pregledali vanjske karakteristike dojki. Stanite s rukama uz tijelo i obratite pozornost na veličinu, oblik i boju dojki. Redovitim izvođenjem ovog koraka, postat ćete upoznate s anatomijom svojih dojki i primijetit ćete eventualne nepravilnosti.
-          .</p>
-      </div>
 
-      <div class="step">
+      <div class="step" onclick="toggleStep(this)">
+      <h3>1. Pogled u ogledalo</h3>
+      <div class="step-text hidden">
+          <p>Započnite samopregled ispred ogledala kako biste vizualno pregledali vanjske karakteristike dojki. Stanite s rukama uz tijelo i obratite pozornost na veličinu, oblik i boju dojki. Redovitim izvođenjem ovog koraka, postat ćete upoznate s anatomijom svojih dojki i primijetit ćete eventualne nepravilnosti.
+      </p>
+     </div>
+    </div>
+
+        <div class="step" onclick="toggleStep(this)">
         <h3>2. Podignite ruke</h3>
+         <div class="step-text hidden">
         <p>Podignite ruke prema gore i pažljivo pregledajte dojke kako biste uočili iste promjene kao u prvom koraku, uključujući oblik, veličinu, izgled kože i ostale znakove.</p>
       </div>
-
-      <div class="step">
-        <h3>3. Pregled bradavica</h3>
-        <p>Stojeći ispred ogledala, nježno pritisnite bradavicu i provjerite javlja li se iscjedak. Iscjedak može biti vodenast, mliječan, žut ili krvav.</p>
       </div>
 
-      <div class="step">
+       <div class="step" onclick="toggleStep(this)">
+        <h3>3. Pregled bradavica</h3>
+         <div class="step-text hidden">
+        <p>Stojeći ispred ogledala, nježno pritisnite bradavicu i provjerite javlja li se iscjedak. Iscjedak može biti vodenast, mliječan, žut ili krvav.</p>
+      </div>
+      </div>
+
+       <div class="step" onclick="toggleStep(this)">
         <h3>4. Pregled dojke u ležećem položaju</h3>
+         <div class="step-text hidden">
         <p>Opipavanjem dojki u ležećem položaju provjerite postoji li prisutnost kvržica ili neuobičajenosti koje niste primijetili ranije. Koristite desnu ruku za pregled lijeve dojke i lijevu ruku za pregled desne dojke. Započnite nježnim i površinskim pokretima, a završite čvršćim i dubljim pokretima koristeći jagodice srednja tri prsta ruke, držeći ih ravno i spojeno. Ruku na strani dojke koju pregledavate stavite ispod glave.
           Pregledavajte dojku kružnim pokretima, počevši od gornjeg dijela ispod ključne kosti, preko vanjskog (pazušnog) dijela, donjeg dijela i unutarnjeg dijela prema dekolteu. Neka vaši prsti naprave krug oko rubnog dijela dojke, koji je za početak i najveći dio. Nastavite s kružnim pokretima, sve manjim krugovima u istom smjeru prema bradavici, koju također pregledavate. Pazite da pregledom obuhvatite cijelu dojku.
         </p>
       </div>
+      </div>
 
-      <div class="step">
+       <div class="step" onclick="toggleStep(this)">
         <h3>5. Pregled dojki dok stojite ili sjedite</h3>
-        <p>Na samom kraju samopregleda opipajte dojke dok stojite ili sjedite. Pregledajte cijelu dojku, koristeći iste pokrete ruku i metode opisane u prethodnom koraku.
-
-Ako vam je tako lakše, namažite dojke uljem ili mlijekom za tijelo ili ako ste u kadi nasapunajte ih.</p>
+         <div class="step-text hidden">
+        <p>Na samom kraju samopregleda opipajte dojke dok stojite ili sjedite. Pregledajte cijelu dojku, koristeći iste pokrete ruku i metode opisane u prethodnom koraku. Ako vam je tako lakše, namažite dojke uljem ili mlijekom za tijelo ili ako ste u kadi nasapunajte ih.</p>
+      </div>
       </div>
 
     </div>
@@ -179,6 +192,25 @@ Ako vam je tako lakše, namažite dojke uljem ili mlijekom za tijelo ili ako ste
           ✅ Točno! Estrogen potiče stanice raka i može ih natjerati da rastu. Estrogen se najčešće pojavljuje u razdoblju od puberteta pa sve do menopauze.
         </div>
       </div>
+
+           <div class="myth-card" onclick="toggleFact(this)">
+        <h3>Mit / činjenica 7</h3>
+        <p>Zdrav način života potpuno štiti od raka dojke.</p>
+
+        <div class="fact hidden">
+          ❌ Netočno! Iako zdrav način života značajno smanjuje rizik od raka dojke, on ga ne može u potpunosti spriječiti. Mnoge žene koje se susretnu s dijagnozom iznenadi spoznaja da se bolest može pojaviti unatoč zdravim životnim navikama, urednoj prehrani i redovitoj tjelovježbi.
+        </div>
+      </div>
+
+      <div class="myth-card" onclick="toggleFact(this)">
+        <h3>Mit / činjenica 8</h3>
+        <p>Samopregled je vrlo pouzdan način za primjećivanje promjena na dojkama.</p>
+
+        <div class="fact hidden">
+          ✅ Točno! Samopregled nije zamjena za mamografiju ili ultrazvuk, ali je prvi i najjednostavniji alat kojim žene mogu rano primijetiti promjene. .
+        </div>
+      </div>
+
 
       
     </div>

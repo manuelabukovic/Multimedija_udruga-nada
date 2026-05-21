@@ -6,6 +6,12 @@ function toggleFact(card){
     fact.classList.toggle('hidden');
 }
 
+function toggleStep(step){
+    const text = step.querySelector('.step-text');
+
+    text.classList.toggle('hidden');
+}
+
 function checkQuiz(){
 
     let score = 0;

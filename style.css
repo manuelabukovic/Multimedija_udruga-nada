@@ -167,6 +167,13 @@ body{
   padding:25px;
   border-radius:15px;
   box-shadow:0 3px 8px rgba(0,0,0,0.1);
+
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.step:hover{
+  transform:translateY(-5px);
 }
 
 .step h3{
