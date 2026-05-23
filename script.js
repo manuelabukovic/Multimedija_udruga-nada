@@ -16,32 +16,53 @@ function checkQuiz(){
 
     let score = 0;
 
-    // Q1
-    const q1 = document.querySelector('input[name="q1"]:checked');
+    // Točni odgovori
+    const answers = {
+        q1: "b",
+        q2: "a",
+        q3: "a",
+        q4: "c"
+    };
 
-    if(q1 && q1.value === "b"){
-        score++;
-    }
+    // Makni stare oznake
+    document.querySelectorAll('.question label').forEach(label => {
+        label.style.backgroundColor = "";
+        label.style.color = "";
+        label.style.borderRadius = "";
+        label.style.padding = "";
+    });
 
-    // Q2
-    const q2 = document.querySelector('input[name="q2"]:checked');
+    // Provjera pitanja
+    for(let key in answers){
 
-    if(q2 && q2.value === "a"){
-        score++;
-    }
+        const selected = document.querySelector(`input[name="${key}"]:checked`);
+        const allAnswers = document.querySelectorAll(`input[name="${key}"]`);
 
-    // Q3
-    const q3 = document.querySelector('input[name="q3"]:checked');
+        allAnswers.forEach(answer => {
 
-    if(q3 && q3.value === "a"){
-        score++;
-    }
+            const label = answer.parentElement;
 
-    // Q4
-    const q4 = document.querySelector('input[name="q4"]:checked');
+            // TOČAN odgovor → zeleno
+            if(answer.value === answers[key]){
+                label.style.backgroundColor = "#c8f7c5";
+                label.style.color = "#1b5e20";
+                label.style.borderRadius = "8px";
+                label.style.padding = "5px";
+            }
 
-    if(q4 && q4.value === "c"){
-        score++;
+            // KRIVI odabrani odgovor → crveno
+            if(selected && selected.value !== answers[key] && answer.checked){
+                label.style.backgroundColor = "#ffcdd2";
+                label.style.color = "#b71c1c";
+                label.style.borderRadius = "8px";
+                label.style.padding = "5px";
+            }
+        });
+
+        // bodovi
+        if(selected && selected.value === answers[key]){
+            score++;
+        }
     }
 
     const result = document.getElementById('result');
